@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import '@/app/ui/global.css';
 import { inter, spaceMono } from '@/app/ui/fonts';
 
@@ -8,7 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.className} antialiased`}>{children}</body>
+      <body className={`${spaceMono.className} antialiased`}>
+        {children} <Analytics />
+      </body>
     </html>
   );
 }
